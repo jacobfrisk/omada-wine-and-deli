@@ -13,6 +13,11 @@
   src: url(../public/font/CalibreRegular.otf);
 }
 
+@font-face {
+  font-family: Omada-font;
+  src: url(../public/font/Aviano-Sans-Bold.woff2);
+}
+
 :root {
   --h1-font-size: 35px;
   --h2-font-size: clamp(1.25rem, 1.0179rem + 0.9524vw, 1.875rem);
@@ -22,6 +27,7 @@
   /*Farver*/
   --orange: #f75443;
   --black: #1e1e1e;
+  --white: #fffef5;
 
   /* Spacing */
   --extra-small: 0.5rem;
@@ -36,6 +42,28 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-family: Omada-font;
+  font-size: var(--h1-font-size);
+  color: var(--orange);
+}
+h2 {
+  font-family: Lora_italic;
+  font-size: var(--h2-font-size);
+  color: var(--orange);
+  font-weight: 300;
+}
+h3 {
+  font-family: Calibre;
+  font-size: var(--h3-font-size);
+  color: var(--black);
+  font-weight: 500;
+}
+p {
+  font-family: Calibre;
+  font-size: var(--p-font-size);
+  color: var(--black);
+}
 @media (min-width: 850px) {
   .main-container {
     padding-inline: var(--large);
