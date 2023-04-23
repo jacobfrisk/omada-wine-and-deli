@@ -1,0 +1,53 @@
+---
+import "../styles.css";
+---
+
+<section id="about" class="main-container">
+    <div id="about_text">
+        <h2>Om os</h2>
+        <p>På Omada Wine & Deli mener vi, at at tilbringe tid med dine kære er en vigtig del af livets bedste fornødenheder. Derfor tilbyder vi alt hvad du har brug for for at skabe en mindeværdig oplevelse med familie og venner.</p>
+        <p>Vores deli på Østerbro har et omfattende udvalg af naturvine, cider, lokale oste, chacuteri, surdejsbrød og meget mere! Kom ind til et glas vin, prøv vores "plat du jour" eller vær med til vores åbne vinsmagninger.</p>
+        <p>Vores hyggelige atmosfære er perfekt til at afholde dit næste arrangement, eller du kan leje vores tap-systemer og smageglas til at hæve niveauet på din egen samling.</p>
+    </div>
+        <img id="about_img" src="../public/images/kitchen.JPG" alt="">
+</section>
+
+<style>
+    section #about_text h2 {
+  font-size: var(--h2-font-size);
+  font-family:Lora_italic ;
+  color: var(--orange);
+  font-weight: 300;
+}
+
+#about_text {
+  margin: 0 5vw 1rem;
+}
+
+#about_text p {
+  font-size: var(--p-font-size);
+  font-family:Calibre ;
+  color: var(--black);
+}
+
+#about_img {
+  max-width: 100%;
+}
+
+#about{
+  margin: 3rem 0;
+}
+
+@media (min-width:850px){
+    section.astro-V2CBYR3P {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  margin: 0;
+}
+
+#about_text {
+  margin: 0 ;
+  padding-right: var(--small);
+}
+}
+</style>

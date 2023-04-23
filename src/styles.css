@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Lora;
+  src: url(../public/font/Lora-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Lora_italic;
+  src: url(../public/font/Lora-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Calibre;
+  src: url(../public/font/CalibreRegular.otf);
+}
+
+:root {
+  --h1-font-size: ;
+  --h2-font-size: clamp(1.25rem, 1.0179rem + 0.9524vw, 1.875rem);
+  --h3-font-size: ;
+  --p-font-size: clamp(1rem, 0.9071rem + 0.381vw, 1.25rem);
+
+  --h1-mobile: ;
+  --p-mobile: 16px;
+
+  /*Farver*/
+  --orange: #f75443;
+  --black: #1e1e1e;
+
+  /* Spacing */
+  --extra-small: 0.5rem;
+  --small: 1rem;
+  --medium: 2rem;
+  --large: 3rem;
+  --extra-large: 5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 850px) {
+  .main-container {
+    padding-inline: 50px;
+    /* max-width: 1200px; */
+    margin-inline: auto;
+  }
+}
