@@ -14,13 +14,10 @@
 }
 
 :root {
-  --h1-font-size: ;
+  --h1-font-size: 35px;
   --h2-font-size: clamp(1.25rem, 1.0179rem + 0.9524vw, 1.875rem);
-  --h3-font-size: ;
+  --h3-font-size: 20px;
   --p-font-size: clamp(1rem, 0.9071rem + 0.381vw, 1.25rem);
-
-  --h1-mobile: ;
-  --p-mobile: 16px;
 
   /*Farver*/
   --orange: #f75443;
@@ -41,7 +38,7 @@ body {
 
 @media (min-width: 850px) {
   .main-container {
-    padding-inline: 50px;
+    padding-inline: var(--large);
     /* max-width: 1200px; */
     margin-inline: auto;
   }
