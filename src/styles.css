@@ -45,7 +45,6 @@ body {
 
 a {
   font-family: lora_italic;
-  transition: 100ms all ease-in;
 }
 
 a:hover {
