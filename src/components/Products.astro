@@ -1,0 +1,116 @@
+---
+import "../styles.css";
+---
+
+<h2>Et udvalg af vores produkter</h2>
+<div class="slider">
+  <div class="slider-item">
+    <img src="../public/images/product-img/product-1.webp" alt="" />
+    <p>Coffee – Gamay of the Morning</p>
+  </div>
+  <div class="slider-item">
+    <img src="../public/images/product-img/product-2.webp" alt="" />
+    <p>Kandy Spices - Muskatblomme</p>
+  </div>
+  <div class="slider-item">
+    <img src="../public/images/product-img/product-4.webp" alt="" />
+    <p>Omada vinglas & proptrækker</p>
+  </div>
+  <div class="slider-item">
+    <img src="../public/images/product-img/product-5.webp" alt="" />
+    <p>Omada vin</p>
+  </div>
+  <div class="slider-item">
+    <img src="../public/images/product-img/product-6.webp" alt="" />
+    <p>Pujadó Solano - Syltede Ansjoser</p>
+  </div>
+  <div class="slider-item">
+    <img src="../public/images/product-img/product-7.webp" alt="" />
+    <p>Æblemost</p>
+  </div>
+  <div class="slider-item">
+    <img src="../public/images/product-img/product-8.webp" alt="" />
+    <p>Vineddike</p>
+  </div>
+  <div class="slider-item">
+    <img src="../public/images/product-img/product-9.webp" alt="" />
+    <p>Tote bag</p>
+  </div>
+  <div class="slider-item">
+    <img src="../public/images/product-img/product-10.webp" alt="" />
+    <p>Omada vin</p>
+  </div>
+</div>
+<svg class="prev"
+  ><svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.6837 42L3.71672e-07 21L18.6837 0L22 3.7275L6.6327 21L22 38.2725L18.6837 42Z" fill="var(--orange)"></path>
+  </svg>
+</svg>
+<svg class="next" width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.31635 1.00287e-07L22 21L3.31634 42L-3.06372e-06 38.2725L15.3673 21L-3.33973e-07 3.7275L3.31635 1.00287e-07Z" fill="var(--orange)"></path>
+</svg>
+
+<style>
+  img {
+    height: 500px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .slider {
+    display: flex;
+    gap: var(--small);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+  }
+
+  p {
+    padding-top: 0.3rem;
+  }
+
+  .prev,
+  .next {
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+  }
+</style>
+
+<script>
+  const slider = document.querySelector(".slider");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  const slideWidth = slider.clientWidth / 10;
+  const slideDuration = 300;
+
+  let currentSlide = 0;
+
+  function showSlide(slideIndex) {
+    slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+  }
+
+  showSlide(currentSlide);
+
+  prevButton.addEventListener("click", () => {
+    if (currentSlide > 0) {
+      currentSlide--;
+      slider.style.transition = `transform ${slideDuration}ms ease-in-out`;
+      showSlide(currentSlide);
+    } else {
+      slider.style.transition = `transform ${slideDuration}ms ease-in-out`;
+      showSlide(currentSlide);
+    }
+  });
+
+  nextButton.addEventListener("click", () => {
+    if (currentSlide < 9) {
+      currentSlide++;
+      slider.style.transition = `transform ${slideDuration}ms ease-in-out`;
+      showSlide(currentSlide);
+    } else {
+      slider.style.transition = `transform ${slideDuration}ms ease-in-out`;
+      showSlide(currentSlide);
+    }
+  });
+</script>
