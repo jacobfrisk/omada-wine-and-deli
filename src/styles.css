@@ -40,12 +40,22 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--white);
+}
+
+a {
+  font-family: lora_italic;
+  transition: 100ms all ease-in;
+}
+
+a:hover {
+  color: var(--orange);
+  transition: 100ms all ease-in;
 }
 
 h1 {
   font-family: Omada-font;
   font-size: var(--h1-font-size);
-  color: var(--orange);
 }
 h2 {
   font-family: Lora_italic;

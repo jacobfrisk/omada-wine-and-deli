@@ -1,0 +1,120 @@
+---
+import "../styles.css";
+---
+
+<div class="video-container">
+  <video muted autoplay loop class="video-web" src="https://www.jacobstrand.dk/videos/video_for_web.webm"></video>
+  <video muted autoplay loop class="video-mobile" src="https://www.jacobstrand.dk/videos/video_for_mobile_web.webm"></video>
+  <div class="info-box">
+    <div class="info-box-content main-container">
+      <div class="info-left">
+        <p>Øster Farimagsgade 26</p>
+        <p>2100 København Ø</p>
+      </div>
+      <h1>Omada Wine & Deli</h1>
+      <div class="info-right">
+        <p>Wednesday - Sunday</p>
+        <p>11 - 20</p>
+      </div>
+    </div>
+  </div>
+</div>
+<nav>
+  <ul>
+    <a href="#about">
+      <li>Om os</li>
+    </a>
+    <a href="#events">
+      <li>Events</li>
+    </a>
+    <a href="#products">
+      <li>Produkter</li>
+    </a>
+    <a href="#reviews">
+      <li>Anmeldelser</li>
+    </a>
+    <a href="#find">
+      <li>Find os</li>
+    </a>
+  </ul>
+</nav>
+
+<style>
+  .video-container {
+    position: relative;
+  }
+
+  .info-box-content {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+  }
+
+  .info-box {
+    position: absolute;
+    z-index: 200;
+    box-shadow: inset 0px 0px 300px 30px var(--orange);
+    bottom: 5px;
+    width: 100%;
+    color: var(--white);
+  }
+
+  .info-box p {
+    color: var(--white);
+  }
+
+  .info-right {
+    text-align: right;
+  }
+
+  video {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+
+  @media (max-width: 850px) {
+    .video-web {
+      display: none;
+    }
+
+    .info-box-content {
+      padding-inline: var(--small);
+    }
+
+    h1 {
+      display: none;
+      color: var(--white);
+    }
+  }
+  @media (min-width: 850px) {
+    .video-mobile {
+      display: none;
+    }
+  }
+
+  nav ul a {
+    text-decoration: none;
+    color: var(--black);
+  }
+
+  a {
+    transition: 100ms all ease-in;
+  }
+
+  a:hover {
+    color: var(--orange);
+    transition: 100ms all ease-in;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+
+    padding-block: var(--medium);
+    background-color: var(--white);
+    border-bottom: 1px solid var(--orange);
+  }
+</style>
