@@ -1,0 +1,104 @@
+---
+
+---
+
+<section class="main-container" >
+    <section id="plat">
+        <h2>
+            Plat du Jour
+        </h2>
+    <div id="plat_text">
+        <p>
+            Leder du efter et lækkert måltid, der er lavet med kærlighed og omsorg? Så se ikke længere end vores "Plat du jour" arrangement. Hver anden fredag tilberedes et måltid af nogle af de mest talentfulde kokke i branchen, kun med de friskeste ingredienser.
+            Hvilken ret vil du gerne se på vores næste Plat du Jour?
+        </p>
+    </div>
+    <div id="plat_vote">
+        <p>Hvilken ret ønsker du at se til vores næste Plat du Jour?</p>
+        <div id="vote">
+            <input type="radio" id="dish1" name="dish" value="spaghetti">
+            <label for="dish1">Spaghetti Meatballs</label><br>
+            <input type="radio" id="dish2" name="dish" value="croque">
+            <label for="age2">Croque messieurs</label><br>  
+            <input type="radio" id="dish3" name="dish" value="pig">
+            <label for="Roasted pig">Roasted pig</label><br><br>
+            <input class="button_white" type="submit" value="Vote">
+        </div>
+    </div>
+  </section>
+</section>
+<section class="main-container" id="all_events">
+  <div id="events">
+    <div id="open-tasting">
+      <h3>Åben vinsmagning</h3>
+      <p>En gang om måneden er du inviteret til at deltage i vores åbne vinsmagning og prøve vores kuraterede udvalg af naturvine i omada.wine's månedlige abonnementskasse.</p>
+    </div>
+    <div id="private-tasting">
+      <h3>Private vinsmagninger</h3>
+      <p>Vi tilbyder også skræddersyede private smagninger og funktioner, der passer nøjagtigt til dine behov.<br>
+        Ellers tilbyder vi følgende plug and play-løsninger:<br>
+        <span class="p-italic">(minimum 4 personer og op til 30)</span></p>
+        
+       <h4> Intro til Mixed Fermentation</h4>
+       <p> En hurtig session om cider, frugt pét-nat og andre mixed fermenteringer. Ca. 1 time.<br>
+        <span class="p-italic"> DKK 199,- per person (med snacks + DKK 49,-)</span></p>
+       <h4> Naturvin: 101</h4>
+       <p> En generel introduktion til naturvinens verden, dens historie, værdier, stil og smag. Ca. 1 time<br>
+        <span class="p-italic"> DKK 349,- per person (med snacks + DKK 75,-)</span></p>
+       <h4> Naturvin: Deep Cuts fra kælderen</h4>
+       <p> En tour de force i naturvine med nogle af vores high-end cuvées og sjældne årgange, kurateret fra vores kælder. Ca. 1-2 timer.<br>
+        <span class="p-italic"> DKK 499,- per person (med snacks +75,-)</span></p>
+    </div>
+  </div>
+  <div id="calender">
+
+  </div>
+</section>
+
+<style>
+    #plat {
+  background-color: var(--orange);
+  padding: var(--medium) var(--small);
+}
+
+#plat_text h3 {
+  color: var(--white);
+}
+
+#plat_text p {
+  color: var(--white);
+}
+
+#plat_vote p {
+  color: var(--white);
+  font-family: Calibre-bold;
+}
+
+label{
+  font-size: var(--p-font-size);
+  font-family: Calibre;
+  color: white;
+}
+
+#plat h2 {
+  color: white;
+}
+
+@media (min-width:850px){
+    #plat{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--large);
+  padding: var(--small )var(--large) ;
+}
+
+#plat_vote {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+#plat_text{
+  grid-column: 1/2;
+}
+}
+</style>
