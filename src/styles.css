@@ -23,6 +23,10 @@
   src: url(../public/font/Aviano-Sans-Bold.woff2);
 }
 
+@font-face {
+  font-family: Calibre-italic;
+  src: url(../public/font/CalibreRegularItalic.otf);
+}
 :root {
   --h1-font-size: 35px;
   --h2-font-size: clamp(1.25rem, 1.0179rem + 0.9524vw, 1.875rem);
