@@ -1,10 +1,11 @@
 ---
-const { headline, name, text } = Astro.props;
+const { location, name, text } = Astro.props;
 ---
 
+<h3>Her er hvad andre synes</h3>
 <li class="testimonial">
-  <h2>{headline}</h2>
   <h3>{name}</h3>
+  <p>{location}</p>
   <p>{text}</p>
 </li>
 

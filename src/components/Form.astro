@@ -1,31 +1,55 @@
 ---
 ---
 
+<h2>Anmeldelser</h2>
+<h3>Har du allerede besøgt vores butik?</h3>
+<p>Vi ville sætte stor pris på at høre din mening!</p>
 <form>
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name" required />
+  <input type="text" id="name" name="name" required placeholder="Hvad er dit navn?" />
 
-  <label for="headline">Headline</label>
-  <input type="text" id="headline" name="headline" required />
+  <input type="text" id="location" name="location" required placeholder="Hvor bor du?" />
 
-  <label for="text">Text</label>
-  <input type="text" id="text" name="text" required />
+  <textarea id="text" name="text" required placeholder="Hvad synes du?" rows="4"></textarea>
 
-  <input type="submit" value="Send" />
+  <input class="submit" type="submit" value="Send" />
 </form>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
+  }
+  input:not(.submit),
+  textarea {
+    font-family: Calibre;
+    font-size: var(--p-font-size);
+    border: none;
+    border-bottom: 1.5px solid var(--orange);
+    background-color: transparent;
+  }
+
+  .submit {
+    background-color: transparent;
+    border: 1.5px solid var(--orange);
+    padding: 0.7rem 3rem;
+    border-radius: 3px;
+  }
+</style>
+
 <script>
   const url = "https://tpzraxtdvophbbqbosqs.supabase.co/rest/v1/Testimonials";
   const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwenJheHRkdm9waGJicWJvc3FzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE3MTUwMjEsImV4cCI6MTk5NzI5MTAyMX0.ZIeHJV3oZD3T-WIq9ILRtu2neaN1gN0CX6mjL0jDjrI";
 
   const form = document.querySelector("form");
 
-  form.addEventListener("submit", sendForm);
+  form.addEventListener(".submit", sendForm);
 
   function sendForm(event) {
     event.preventDefault();
     const formData = form.elements;
     let name = formData.name.value;
-    let headline = formData.headline.value;
+    let location = formData.location.value;
     let text = formData.text.value;
     console.log(formData.headline.value);
 
@@ -36,7 +60,7 @@
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, text, headline }),
+      body: JSON.stringify({ name, text, location }),
     });
   }
 </script>
