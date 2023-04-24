@@ -145,6 +145,11 @@ p {
   transition: 1s all;
 }
 
+.hidden-left {
+  transform: translateX(30px);
+  transition: 1s all;
+}
+
 .show {
   opacity: 1;
   /* filter: blur(0); */
