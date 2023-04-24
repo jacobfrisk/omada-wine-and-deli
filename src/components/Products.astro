@@ -2,54 +2,58 @@
 import "../styles.css";
 ---
 
-<h2>Et udvalg af vores produkter</h2>
-<div class="slider">
-  <div class="slider-item">
-    <img src="../public/images/product-img/product-1.webp" alt="" />
-    <p>Coffee – Gamay of the Morning</p>
+<div class="product-container">
+  <h2 class="main-container">Et udvalg af vores produkter</h2>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slider-item">
+        <img src="../public/images/product-img/product-1.webp" alt="" />
+        <p>Coffee – Gamay of the Morning</p>
+      </div>
+      <div class="slider-item">
+        <img src="../public/images/product-img/product-2.webp" alt="" />
+        <p>Kandy Spices - Muskatblomme</p>
+      </div>
+      <div class="slider-item">
+        <img src="../public/images/product-img/product-4.webp" alt="" />
+        <p>Omada vinglas & proptrækker</p>
+      </div>
+      <div class="slider-item">
+        <img src="../public/images/product-img/product-5.webp" alt="" />
+        <p>Omada vin</p>
+      </div>
+      <div class="slider-item">
+        <img src="../public/images/product-img/product-6.webp" alt="" />
+        <p>Pujadó Solano - Syltede Ansjoser</p>
+      </div>
+      <div class="slider-item">
+        <img src="../public/images/product-img/product-7.webp" alt="" />
+        <p>Æblemost</p>
+      </div>
+      <div class="slider-item">
+        <img src="../public/images/product-img/product-8.webp" alt="" />
+        <p>Vineddike</p>
+      </div>
+      <div class="slider-item">
+        <img src="../public/images/product-img/product-9.webp" alt="" />
+        <p>Tote bag</p>
+      </div>
+      <div class="slider-item">
+        <img src="../public/images/product-img/product-10.webp" alt="" />
+        <p>Omada vin</p>
+      </div>
+    </div>
+    <div class="slider-btn">
+      <svg class="prev"
+        ><svg class="slider-button prev" width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.6837 42L3.71672e-07 21L18.6837 0L22 3.7275L6.6327 21L22 38.2725L18.6837 42Z" fill="var(--orange)"></path>
+        </svg>
+      </svg>
+      <svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.31635 1.00287e-07L22 21L3.31634 42L-3.06372e-06 38.2725L15.3673 21L-3.33973e-07 3.7275L3.31635 1.00287e-07Z" fill="var(--orange)"></path>
+      </svg>
+    </div>
   </div>
-  <div class="slider-item">
-    <img src="../public/images/product-img/product-2.webp" alt="" />
-    <p>Kandy Spices - Muskatblomme</p>
-  </div>
-  <div class="slider-item">
-    <img src="../public/images/product-img/product-4.webp" alt="" />
-    <p>Omada vinglas & proptrækker</p>
-  </div>
-  <div class="slider-item">
-    <img src="../public/images/product-img/product-5.webp" alt="" />
-    <p>Omada vin</p>
-  </div>
-  <div class="slider-item">
-    <img src="../public/images/product-img/product-6.webp" alt="" />
-    <p>Pujadó Solano - Syltede Ansjoser</p>
-  </div>
-  <div class="slider-item">
-    <img src="../public/images/product-img/product-7.webp" alt="" />
-    <p>Æblemost</p>
-  </div>
-  <div class="slider-item">
-    <img src="../public/images/product-img/product-8.webp" alt="" />
-    <p>Vineddike</p>
-  </div>
-  <div class="slider-item">
-    <img src="../public/images/product-img/product-9.webp" alt="" />
-    <p>Tote bag</p>
-  </div>
-  <div class="slider-item">
-    <img src="../public/images/product-img/product-10.webp" alt="" />
-    <p>Omada vin</p>
-  </div>
-</div>
-<div class="slider-btn">
-  <svg class="prev"
-    ><svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M18.6837 42L3.71672e-07 21L18.6837 0L22 3.7275L6.6327 21L22 38.2725L18.6837 42Z" fill="var(--orange)"></path>
-    </svg>
-  </svg>
-  <svg class="next" width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.31635 1.00287e-07L22 21L3.31634 42L-3.06372e-06 38.2725L15.3673 21L-3.33973e-07 3.7275L3.31635 1.00287e-07Z" fill="var(--orange)"></path>
-  </svg>
 </div>
 
 <style>
@@ -57,82 +61,108 @@ import "../styles.css";
     height: 500px;
     width: 300px;
     object-fit: cover;
-  }
-
-  .slider {
-    display: flex;
-    gap: var(--medium);
-    transition: all 0.5s ease-in-out;
-    position: absolute;
+    pointer-events: none;
   }
 
   p {
     padding-top: 0.3rem;
   }
 
-  .prev,
-  .next {
+  h2 {
+    padding-block: var(--small);
+  }
+
+  .slider {
+    display: flex;
+    gap: var(--small);
+    /* padding-left: var(--small); */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .product-container {
     position: relative;
-    cursor: pointer;
-    z-index: 100;
+    overflow: hidden;
   }
 
   .slider-btn {
     display: flex;
+    transform: translateY(-170%);
     justify-content: space-between;
-    transform: translateY(150%);
-    width: 95%;
-    margin-inline: auto;
+    padding-inline: var(--small);
   }
 
-  h2 {
-    padding-block: var(--small);
+  .slider-btn svg {
+    cursor: pointer;
+  }
+
+  @media (max-width: 850px) {
+    h2 {
+      padding-inline: var(--small);
+    }
   }
 </style>
 
 <script>
   const slider = document.querySelector(".slider");
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
-  const slideWidth = slider.clientWidth / 7;
-  const slideDuration = 500;
-  const slideCount = slider.childElementCount;
-  const clonedSlides = [];
+  const prevBtn = document.querySelector(".slider-btn .prev");
+  const nextBtn = document.querySelector(".slider-btn svg:not(.prev)");
+  const itemWidth = 500;
+  let currentPosition = 0;
+  const numItems = slider.children.length;
+  let startX = null;
+  let dragging = false;
 
-  let currentSlide = 0;
-
-  // Clone the first and last slides
-  for (let i = 0; i < slideCount; i++) {
-    const clonedSlide = slider.children[i].cloneNode(true);
-    clonedSlides.push(clonedSlide);
-  }
-  slider.append(...clonedSlides);
-
-  function showSlide(slideIndex) {
-    slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+  // Clone slides for infinite loop
+  for (let i = 0; i < numItems; i++) {
+    slider.appendChild(slider.children[i].cloneNode(true));
   }
 
-  showSlide(currentSlide);
-
-  prevButton.addEventListener("click", () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      slider.style.transition = `transform ${slideDuration}ms ease-in-out`;
-    } else {
-      currentSlide = slideCount - 1;
-      slider.style.transition = `none`;
-    }
-    showSlide(currentSlide);
+  prevBtn.addEventListener("click", () => {
+    currentPosition = Math.max(currentPosition - itemWidth, 0);
+    slider.style.transform = `translateX(-${currentPosition}px)`;
+    slider.style.overflow = "visible";
   });
 
-  nextButton.addEventListener("click", () => {
-    if (currentSlide < slideCount * 2 - 1) {
-      currentSlide++;
-      slider.style.transition = `transform ${slideDuration}ms ease-in-out`;
-    } else {
-      currentSlide = slideCount;
-      slider.style.transition = `none`;
+  nextBtn.addEventListener("click", () => {
+    const maxPosition = (numItems - 1) * itemWidth;
+    currentPosition = (currentPosition + itemWidth) % (maxPosition + itemWidth);
+    slider.style.transform = `translateX(-${currentPosition}px)`;
+    slider.style.overflow = "visible";
+  });
+
+  slider.addEventListener("mousedown", (e) => {
+    startX = e.clientX;
+    dragging = true;
+  });
+
+  slider.addEventListener("mouseup", () => {
+    dragging = false;
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (dragging) {
+      const diff = e.clientX - startX;
+      currentPosition = Math.min(Math.max(currentPosition - diff, 0), (numItems - 1) * itemWidth);
+      slider.style.transform = `translateX(-${currentPosition}px)`;
+      startX = e.clientX;
     }
-    showSlide(currentSlide);
+  });
+
+  slider.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    dragging = true;
+  });
+
+  slider.addEventListener("touchend", () => {
+    dragging = false;
+  });
+
+  slider.addEventListener("touchmove", (e) => {
+    if (dragging) {
+      const diff = e.touches[0].clientX - startX;
+      currentPosition = Math.min(Math.max(currentPosition - diff, 0), (numItems - 1) * itemWidth);
+      slider.style.transform = `translateX(-${currentPosition}px)`;
+      startX = e.touches[0].clientX;
+    }
   });
 </script>
