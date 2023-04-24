@@ -30,7 +30,7 @@
 :root {
   --h1-font-size: 35px;
   --h2-font-size: clamp(1.25rem, 1.0179rem + 0.9524vw, 1.875rem);
-  --h3-font-size: 20px;
+  --h3-font-size: clamp(1.0625rem, 0.9929rem + 0.2857vw, 1.25rem);
   --p-font-size: clamp(1rem, 0.9071rem + 0.381vw, 1.25rem);
 
   /*Farver*/

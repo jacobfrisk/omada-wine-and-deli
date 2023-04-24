@@ -18,21 +18,35 @@ const udsagn = await response.json();
 import "../styles.css";
 ---
 
-<Form />
-<h3>Her er hvad andre synes</h3>
-<ul>
-  {
-    udsagn.map((testimonial) => {
-      return <Testimonial name={testimonial.name} location={testimonial.location} text={testimonial.text} />;
-    })
-  }
-</ul>
-
-<Testimonial />
+<main id="#reviews" class="main-container">
+  <Form />
+  <ul>
+    <h3>Her er hvad andre synes</h3>
+    {
+      udsagn.map((testimonial) => {
+        return <Testimonial name={testimonial.name} location={testimonial.location} text={testimonial.text} />;
+      })
+    }
+  </ul>
+</main>
 
 <style>
   ul {
     margin: 0;
     padding: 0;
+    margin-top: 55px;
+  }
+
+  @media (max-width: 850px) {
+    main {
+      padding-inline: var(--small);
+    }
+  }
+
+  @media (min-width: 850px) {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+    }
   }
 </style>
