@@ -10,14 +10,28 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <Hero />
-  <About />
-  <Events />
-  <Products />
-  <Reviews />
-  <Maps />
+  <div class="main-item">
+    <About />
+  </div>
+  <div class="main-item">
+    <Events />
+  </div>
+  <div class="main-item">
+    <Products />
+  </div>
+  <div class="main-item">
+    <Reviews />
+  </div>
+  <div class="main-item">
+    <Maps />
+  </div>
 </MainLayout>
 
-<style></style>
+<style>
+  .main-item {
+    margin-bottom: 5rem;
+  }
+</style>
 
 <script>
   const observer = new IntersectionObserver(

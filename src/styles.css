@@ -51,10 +51,13 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
 body {
   background-color: var(--white);
-  scroll-behavior: smooth;
-  height: 100%;
 }
 
 a {
