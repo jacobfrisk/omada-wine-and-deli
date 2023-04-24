@@ -54,6 +54,7 @@
 body {
   background-color: var(--white);
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 a {
