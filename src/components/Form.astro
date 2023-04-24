@@ -1,20 +1,25 @@
 ---
 ---
 
-<h2>Anmeldelser</h2>
-<h3>Har du allerede besøgt vores butik?</h3>
-<p>Vi ville sætte stor pris på at høre din mening!</p>
-<form>
-  <input type="text" id="name" name="name" required placeholder="Hvad er dit navn?" />
+<section id="form">
+  <h2>Anmeldelser</h2>
+  <h3>Har du allerede besøgt vores butik?</h3>
+  <p>Vi ville sætte stor pris på at høre din mening!</p>
+  <form>
+    <input type="text" id="name" name="name" required placeholder="Hvad er dit navn?" />
 
-  <input type="text" id="location" name="location" required placeholder="Hvor bor du?" />
+    <input type="text" id="location" name="location" required placeholder="Hvor bor du?" />
 
-  <textarea id="text" name="text" required placeholder="Hvad synes du?" rows="4"></textarea>
+    <textarea id="text" name="text" required placeholder="Hvad synes du?" rows="4"></textarea>
 
-  <input class="submit" type="submit" value="Send" />
-</form>
+    <input class="submit" type="submit" value="Send" />
+  </form>
+</section>
 
 <style>
+  #form > * {
+    margin-bottom: 1rem;
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -27,6 +32,13 @@
     border: none;
     border-bottom: 1.5px solid var(--orange);
     background-color: transparent;
+    padding-left: 0.5rem;
+  }
+
+  textarea {
+    border: 1.5px solid var(--orange);
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   .submit {
@@ -51,7 +63,7 @@
     let name = formData.name.value;
     let location = formData.location.value;
     let text = formData.text.value;
-    console.log(formData.headline.value);
+    console.log(formData.location.value);
 
     fetch(url, {
       method: "POST",

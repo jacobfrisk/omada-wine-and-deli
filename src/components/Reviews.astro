@@ -19,14 +19,15 @@ import "../styles.css";
 ---
 
 <Form />
-
+<h3>Her er hvad andre synes</h3>
 <ul>
   {
     udsagn.map((testimonial) => {
-      return <Testimonial name={testimonial.name} headline={testimonial.location} text={testimonial.text} />;
+      return <Testimonial name={testimonial.name} location={testimonial.location} text={testimonial.text} />;
     })
   }
 </ul>
+
 <Testimonial />
 
 <style>
