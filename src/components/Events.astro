@@ -1,5 +1,15 @@
 ---
+const url =
+  "https://tpzraxtdvophbbqbosqs.supabase.co/rest/v1/events?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwenJheHRkdm9waGJicWJvc3FzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE3MTUwMjEsImV4cCI6MTk5NzI5MTAyMX0.ZIeHJV3oZD3T-WIq9ILRtu2neaN1gN0CX6mjL0jDjrI";
 
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwenJheHRkdm9waGJicWJvc3FzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE3MTUwMjEsImV4cCI6MTk5NzI5MTAyMX0.ZIeHJV3oZD3T-WIq9ILRtu2neaN1gN0CX6mjL0jDjrI",
+  },
+};
+
+const response = await fetch(url, options);
+const data = await response.json();
 ---
 
 <section class="main-container" >
@@ -29,6 +39,7 @@
 </section>
 <section class="main-container" id="all_events">
   <div id="events">
+    <h2>Events</h2>
     <div id="open-tasting">
       <h3>Åben vinsmagning</h3>
       <p>En gang om måneden er du inviteret til at deltage i vores åbne vinsmagning og prøve vores kuraterede udvalg af naturvine i omada.wine's månedlige abonnementskasse.</p>
@@ -48,10 +59,30 @@
        <h4> Naturvin: Deep Cuts fra kælderen</h4>
        <p> En tour de force i naturvine med nogle af vores high-end cuvées og sjældne årgange, kurateret fra vores kælder. Ca. 1-2 timer.<br>
         <span class="p-italic"> DKK 499,- per person (med snacks +75,-)</span></p>
+        <button class="button-red">Book tasting</button>
     </div>
   </div>
   <div id="calender">
-
+    <h2>Kalender</h2>
+    {
+      data.map((event) => {
+        return (
+          <article id="event" >
+            <div class="event_info">
+              <p class="orange">{event.eventtype}</p>
+              <h3 class="h3-italic">{event.title}</h3>
+              <p>{event.subtitle}</p>
+            </div>
+              <div class="event-date">
+                <p>{event.date}</p>
+                <p>{event.time}</p>
+                <p>{event.price}</p>
+              </div>
+          </article>
+        );
+      })
+    }
+    <hr class="hr-vertical">
   </div>
 </section>
 
@@ -100,5 +131,39 @@ label{
 #plat_text{
   grid-column: 1/2;
 }
+}
+#all_events{
+  margin: var(--small);
+}
+#open-tasting h3, #private-tasting h3 {
+  color: var(--orange);
+  margin-bottom: 0;
+}
+
+article.astro-BQSSETP2 {
+  border-bottom: 1px solid var(--orange);
+  margin-bottom: var(--small) ;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: var(--small) 0;
+  gap: var(--extra-small);
+}
+
+.event_info {
+  grid-column: 1/4;
+}
+
+.event-date {
+    grid-column: 4/5;
+
+}
+
+.event_info p, .event_info h3{
+  margin: var(--extra-small) 0;
+}
+
+.event-date p{
+  margin: var(--extra-small) 0;
+  text-align: right;
 }
 </style>

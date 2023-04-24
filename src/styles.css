@@ -81,6 +81,20 @@ h3 {
   color: var(--black);
   font-weight: 500;
 }
+
+.h3-italic {
+  font-family: Calibre-italic;
+  font-size: var(--h3-font-size);
+  color: var(--black);
+  font-weight: 300;
+}
+h4 {
+  font-family: Calibre-bold;
+  font-size: var(--p-font-size);
+  color: var(--black);
+  margin-bottom: 0;
+}
+
 p {
   font-family: Calibre;
   font-size: var(--p-font-size);
@@ -107,4 +121,18 @@ p {
   color: var(--orange);
   font-family: calibre;
   font-size: var(--p-font-size);
+}
+
+.button-red {
+  font-family: Calibre;
+  font-size: var(--p-font-size);
+  background-color: var(--orange);
+  border: none;
+  padding-bottom: 0;
+  padding: 1rem 2rem;
+  color: var(--white);
+}
+
+.orange {
+  color: var(--orange);
 }
