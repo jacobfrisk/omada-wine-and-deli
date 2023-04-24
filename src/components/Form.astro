@@ -51,6 +51,14 @@
     border: 1.5px solid var(--orange);
     padding: 0.7rem 3rem;
     border-radius: 3px;
+    cursor: pointer;
+    color: var(--orange);
+    transition: 100ms all ease-in;
+  }
+
+  .submit:hover {
+    background-color: var(--orange);
+    color: var(--white);
   }
 </style>
 
@@ -60,7 +68,7 @@
 
   const form = document.querySelector("form");
 
-  form.addEventListener(".submit", sendForm);
+  form.addEventListener("submit", sendForm);
 
   function sendForm(event) {
     event.preventDefault();
