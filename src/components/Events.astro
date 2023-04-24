@@ -32,7 +32,7 @@ const data = await response.json();
             <label for="age2">Croque messieurs</label><br>  
             <input type="radio" id="dish3" name="dish" value="pig">
             <label for="Roasted pig">Roasted pig</label><br><br>
-            <input class="button_white" type="submit" value="Vote">
+            <input class="submit-white" type="submit" value="Vote">
         </div>
     </div>
   </section>
@@ -234,5 +234,20 @@ hr.hr-vertical {
   .submit:hover {
     background-color: transparent;
     color: var(--orange);
+  }
+
+  .submit-white{
+    background-color: var(--white);
+    border: 1.5px solid var(--orange);
+    padding: 0.7rem 3rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--orange);
+    transition: 100ms all ease-in;
+  }
+
+  .submit-white:hover {
+    background-color: grey;
+    color: var(--white);
   }
 </style>
