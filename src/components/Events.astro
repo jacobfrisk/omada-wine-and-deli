@@ -87,6 +87,18 @@ const data = await response.json();
 </section>
 
 <style>
+
+h2 {
+  margin-bottom: var(--small);
+}
+
+h3{
+  margin-bottom: var(--small);
+}
+
+p{
+  margin-bottom: var(--small);
+}
     #plat {
   background-color: var(--orange);
   padding: var(--medium) var(--small);
@@ -121,6 +133,7 @@ label{
   grid-template-columns: 1fr 1fr;
   gap: 0 var(--large);
   padding: var(--small )var(--large) ;
+  margin-bottom: var(--medium);
 }
 
 #plat_vote {
@@ -134,6 +147,7 @@ label{
 }
 #all_events{
   margin: var(--small);
+  position: relative;
 }
 #open-tasting h3, #private-tasting h3 {
   color: var(--orange);
@@ -158,6 +172,13 @@ article.astro-BQSSETP2 {
 
 }
 
+#calender {
+  margin-bottom: var(--small);
+}
+#events {
+  margin-bottom: var(--small);
+}
+
 .event_info p, .event_info h3{
   margin: var(--extra-small) 0;
 }
@@ -165,5 +186,37 @@ article.astro-BQSSETP2 {
 .event-date p{
   margin: var(--extra-small) 0;
   text-align: right;
+}
+
+.hr-vertical{
+  display: none;
+}
+
+@media (min-width:850px){
+  #all_events{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: var(--large);
+  margin: 0;
+}
+
+#calender {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#events {
+  grid-column: 2/3;
+}
+
+hr.hr-vertical {
+  display: block;
+  width: 0px;
+    height: 100%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    border-left: 1px solid var(--orange);
+}
 }
 </style>
