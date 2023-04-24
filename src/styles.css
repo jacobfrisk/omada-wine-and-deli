@@ -14,15 +14,19 @@
 }
 
 @font-face {
+  font-family: Calibre-bold;
+  src: url(../public/font/CalibreMedium.otf);
+}
+
+@font-face {
   font-family: Omada-font;
   src: url(../public/font/Aviano-Sans-Bold.woff2);
 }
 
-* {
-  padding: 0;
-  margin: 0;
+@font-face {
+  font-family: Calibre-italic;
+  src: url(../public/font/CalibreRegularItalic.otf);
 }
-
 :root {
   --h1-font-size: 35px;
   --h2-font-size: clamp(1.25rem, 1.0179rem + 0.9524vw, 1.875rem);
@@ -69,7 +73,7 @@ h2 {
   font-weight: 300;
 }
 h3 {
-  font-family: Calibre;
+  font-family: Calibre-bold;
   font-size: var(--h3-font-size);
   color: var(--black);
   font-weight: 500;
@@ -79,10 +83,25 @@ p {
   font-size: var(--p-font-size);
   color: var(--black);
 }
+
+.p-italic {
+  font-family: Calibre-italic;
+  font-size: var(--p-font-size);
+  color: var(--black);
+}
 @media (min-width: 850px) {
   .main-container {
     padding-inline: var(--large);
     /* max-width: 1200px; */
     margin-inline: auto;
   }
+}
+
+.button_white {
+  padding: 10px 16px;
+  border: var(--orange) solid 1px;
+  background-color: var(--white);
+  color: var(--orange);
+  font-family: calibre;
+  font-size: var(--p-font-size);
 }
