@@ -59,7 +59,7 @@ const data = await response.json();
        <h4> Naturvin: Deep Cuts fra kælderen</h4>
        <p> En tour de force i naturvine med nogle af vores high-end cuvées og sjældne årgange, kurateret fra vores kælder. Ca. 1-2 timer.<br>
         <span class="p-italic"> DKK 499,- per person (med snacks +75,-)</span></p>
-        <button class="button-red">Book tasting</button>
+        <button class="submit">Book tasting</button>
     </div>
   </div>
   <div id="calender">
@@ -212,11 +212,27 @@ article.astro-BQSSETP2 {
 hr.hr-vertical {
   display: block;
   width: 0px;
-    height: 100%;
+    height: 95%;
     position: absolute;
     top: 10px;
     left: 50%;
     border-left: 1px solid var(--orange);
+    border-right: 0;
 }
 }
+
+.submit {
+    background-color: var(--orange);
+    border: 1.5px solid var(--orange);
+    padding: 0.7rem 3rem;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--white);
+    transition: 100ms all ease-in;
+  }
+
+  .submit:hover {
+    background-color: transparent;
+    color: var(--orange);
+  }
 </style>
