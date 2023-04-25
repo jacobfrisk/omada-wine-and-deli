@@ -4,131 +4,71 @@ import "../styles.css";
 
 <section class="product-container" id="products">
   <h2 class="main-container">Et udvalg af vores produkter</h2>
-  <div class="slider-container">
-    <div class="slider">
-      <div class="slider-item">
-        <img src="/images/product-img/product-1.webp" alt="" />
-        <p>Coffee – Gamay of the Morning</p>
-      </div>
-      <div class="slider-item">
-        <img src="/images/product-img/product-2.webp" alt="" />
-        <p>Kandy Spices - Muskatblomme</p>
-      </div>
-      <div class="slider-item">
-        <img src="/images/product-img/product-4.webp" alt="" />
-        <p>Omada vinglas & proptrækker</p>
-      </div>
-      <div class="slider-item">
-        <img src="/images/product-img/product-5.webp" alt="" />
-        <p>Omada vin</p>
-      </div>
-      <div class="slider-item">
-        <img src="/images/product-img/product-6.webp" alt="" />
-        <p>Pujadó Solano - Syltede Ansjoser</p>
-      </div>
-      <div class="slider-item">
-        <img src="/images/product-img/product-7.webp" alt="" />
-        <p>Æblemost</p>
-      </div>
-      <div class="slider-item">
-        <img src="/images/product-img/product-8.webp" alt="" />
-        <p>Vineddike</p>
-      </div>
-      <div class="slider-item">
-        <img src="/images/product-img/product-9.webp" alt="" />
-        <p>Tote bag</p>
-      </div>
-      <div class="slider-item">
-        <img src="/images/product-img/product-10.webp" alt="" />
-        <p>Omada vin</p>
-      </div>
+  <div class="slider">
+    <div class="slider-item">
+      <img src="/images/product-img/product-1.webp" alt="" />
+      <p>Coffee – Gamay of the Morning</p>
     </div>
-    <div class="slider-btn">
-      <svg class="prev"
-        ><svg class="slider-button prev" width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18.6837 42L3.71672e-07 21L18.6837 0L22 3.7275L6.6327 21L22 38.2725L18.6837 42Z" fill="var(--orange)"></path>
-        </svg>
-      </svg>
-      <svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.31635 1.00287e-07L22 21L3.31634 42L-3.06372e-06 38.2725L15.3673 21L-3.33973e-07 3.7275L3.31635 1.00287e-07Z" fill="var(--orange)"></path>
-      </svg>
+    <div class="slider-item">
+      <img src="/images/product-img/product-2.webp" alt="" />
+      <p>Kandy Spices - Muskatblomme</p>
     </div>
+    <div class="slider-item">
+      <img src="/images/product-img/product-4.webp" alt="" />
+      <p>Omada vinglas & proptrækker</p>
+    </div>
+    <div class="slider-item">
+      <img src="/images/product-img/product-5.webp" alt="" />
+      <p>Omada vin</p>
+    </div>
+    <div class="slider-item">
+      <img src="/images/product-img/product-6.webp" alt="" />
+      <p>Pujadó Solano - Syltede Ansjoser</p>
+    </div>
+    <div class="slider-item">
+      <img src="/images/product-img/product-7.webp" alt="" />
+      <p>Æblemost</p>
+    </div>
+    <div class="slider-item">
+      <img src="/images/product-img/product-8.webp" alt="" />
+      <p>Vineddike</p>
+    </div>
+    <div class="slider-item">
+      <img src="/images/product-img/product-10.webp" alt="" />
+      <p>Omada vin</p>
+    </div>
+  </div>
+  <div class="scroll-symbol main-container">
+    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path fill="var(--orange)" d="M273 896 80 703l193-193 42 42-121 121h316v60H194l121 121-42 42Zm414-254-42-42 121-121H450v-60h316L645 298l42-42 193 193-193 193Z"></path></svg>
   </div>
 </section>
 
 <style>
   img {
-    height: 500px;
-    width: 300px;
-    object-fit: cover;
-    pointer-events: none;
-  }
-
-  p {
-    padding-top: 0.3rem;
-  }
-
-  h2 {
-    padding-block: var(--small);
+    height: clamp(31.25rem, 28.9286rem + 9.5238vw, 37.5rem);
   }
 
   .slider {
     display: flex;
-    gap: var(--small);
-    /* padding-left: var(--small); */
-    transition: transform 0.5s ease-in-out;
+    gap: var(--medium);
+    overflow-x: scroll;
+    margin-top: var(--small);
   }
 
-  .slider-container {
-    height: 530px;
-  }
-
-  .product-container {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .slider-btn {
+  .scroll-symbol {
     display: flex;
-    transform: translateY(-170%);
-    justify-content: space-between;
-    padding-inline: var(--small);
+    justify-content: flex-end;
+    margin-top: var(--small);
   }
 
-  .slider-btn svg {
-    cursor: pointer;
+  .slider-item p {
+    margin-top: 0.3rem;
   }
 
   @media (max-width: 850px) {
-    h2 {
+    h2,
+    .scroll-symbol {
       padding-inline: var(--small);
     }
   }
 </style>
-
-<script>
-  const slider = document.querySelector(".slider");
-  const prevBtn = document.querySelector(".slider-btn .prev");
-  const nextBtn = document.querySelector(".slider-btn svg:not(.prev)");
-  const itemWidth = 300;
-  let currentPosition = 0;
-  const numItems = slider.children.length;
-
-  // Clone slides for infinite loop
-  for (let i = 0; i < numItems; i++) {
-    slider.appendChild(slider.children[i].cloneNode(true));
-  }
-
-  prevBtn.addEventListener("click", () => {
-    currentPosition = Math.max(currentPosition - itemWidth, 0);
-    slider.style.transform = `translateX(-${currentPosition}px)`;
-    slider.style.overflow = "visible";
-  });
-
-  nextBtn.addEventListener("click", () => {
-    const maxPosition = (numItems - 1) * itemWidth;
-    currentPosition = (currentPosition + itemWidth) % (maxPosition + itemWidth);
-    slider.style.transform = `translateX(-${currentPosition}px)`;
-    slider.style.overflow = "visible";
-  });
-</script>
