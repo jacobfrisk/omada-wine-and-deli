@@ -35,18 +35,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 </style>
 
 <script>
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show");
-        }
-      });
-    },
-    { threshold: [0.2] }
-  );
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
 
   const hiddenElements = document.querySelectorAll(".hidden, .hidden-left");
   hiddenElements.forEach((el) => observer.observe(el));
