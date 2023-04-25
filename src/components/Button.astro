@@ -1,0 +1,76 @@
+---
+import "../styles.css";
+const { text } = Astro.props;
+---
+
+<a href="#">
+  <span>{text}</span>
+  <div class="liquid"></div>
+</a>
+
+<style>
+  a {
+    font-family: Calibre;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--orange);
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: fit-content;
+  }
+
+  a span {
+    position: relative;
+    z-index: 1;
+    color: var(--orange);
+  }
+
+  a .liquid {
+    position: absolute;
+    left: 0;
+    top: -75px;
+    width: 200px;
+    height: 200px;
+    background: var(--orange);
+    /* box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); */
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  a .liquid:before,
+  a .liquid:after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    overflow: hidden;
+  }
+
+  a .liquid:before {
+    border-radius: 45%;
+    /* background: rgba(20, 20, 20, 1); */
+    background: var(--white);
+    animation: animate 10s linear infinite;
+    overflow: hidden;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+
+  a:hover .liquid {
+    top: -110px;
+  }
+
+  a:hover span {
+    color: var(--white);
+  }
+</style>

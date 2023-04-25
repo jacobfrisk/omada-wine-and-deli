@@ -1,4 +1,6 @@
 ---
+import Button from "./Button.astro";
+
 const url =
   "https://tpzraxtdvophbbqbosqs.supabase.co/rest/v1/events?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwenJheHRkdm9waGJicWJvc3FzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE3MTUwMjEsImV4cCI6MTk5NzI5MTAyMX0.ZIeHJV3oZD3T-WIq9ILRtu2neaN1gN0CX6mjL0jDjrI";
 
@@ -17,8 +19,8 @@ const data = await response.json();
     <h2>Plat du Jour</h2>
     <div id="plat_text">
       <p>
-        Leder du efter et lækkert måltid, der er lavet med kærlighed og omhu? Så se ikke længere end vores "Plat du jour" begivenhed. Hver anden fredag tilberedes et måltid af nogle af de mest talentfulde kokke i branchen, kun med de friskeste
-        ingredienser. Hvilken ret vil du gerne se på vores næste Plat du Jour?
+        Leder du efter et lækkert måltid, der er lavet med kærlighed og omhu? Så se ikke længere end vores "Plat du jour" begivenhed. Hver anden fredag tilberedes et måltid af nogle af de mest talentfulde kokke i branchen, kun med de friskeste ingredienser. Hvilken ret vil du
+        gerne se på vores næste Plat du Jour?
       </p>
     </div>
     <div id="plat_vote">
@@ -65,7 +67,8 @@ const data = await response.json();
         En tour de force i naturvine med nogle af vores high-end cuvées og sjældne årgange, kurateret fra vores kælder. Ca. 1-2 timer.<br />
         <span class="p-italic"> DKK 499,- per person (med snacks +75,-)</span>
       </p>
-      <button class="submit">Book tasting</button>
+      <!-- <button class="submit">Book tasting</button> -->
+      <Button text="Book tasting" />
     </div>
   </div>
   <div id="calender">
