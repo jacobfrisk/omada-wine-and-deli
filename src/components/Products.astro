@@ -103,10 +103,6 @@ import "../styles.css";
     h2 {
       padding-inline: var(--small);
     }
-
-    .slider {
-      overflow-x: scroll;
-    }
   }
 </style>
 
@@ -117,8 +113,6 @@ import "../styles.css";
   const itemWidth = 500;
   let currentPosition = 0;
   const numItems = slider.children.length;
-  let startX = null;
-  let dragging = false;
 
   // Clone slides for infinite loop
   for (let i = 0; i < numItems; i++) {
@@ -137,40 +131,4 @@ import "../styles.css";
     slider.style.transform = `translateX(-${currentPosition}px)`;
     slider.style.overflow = "visible";
   });
-
-  // slider.addEventListener("mousedown", (e) => {
-  //   startX = e.clientX;
-  //   dragging = true;
-  // });
-
-  // slider.addEventListener("mouseup", () => {
-  //   dragging = false;
-  // });
-
-  // slider.addEventListener("mousemove", (e) => {
-  //   if (dragging) {
-  //     const diff = e.clientX - startX;
-  //     currentPosition = Math.min(Math.max(currentPosition - diff, 0), (numItems - 1) * itemWidth);
-  //     slider.style.transform = `translateX(-${currentPosition}px)`;
-  //     startX = e.clientX;
-  //   }
-  // });
-
-  // slider.addEventListener("touchstart", (e) => {
-  //   startX = e.touches[0].clientX;
-  //   dragging = true;
-  // });
-
-  // slider.addEventListener("touchend", () => {
-  //   dragging = false;
-  // });
-
-  // slider.addEventListener("touchmove", (e) => {
-  //   if (dragging) {
-  //     const diff = e.touches[0].clientX - startX;
-  //     currentPosition = Math.min(Math.max(currentPosition - diff, 0), (numItems - 1) * itemWidth);
-  //     slider.style.transform = `translateX(-${currentPosition}px)`;
-  //     startX = e.touches[0].clientX;
-  //   }
-  // });
 </script>
