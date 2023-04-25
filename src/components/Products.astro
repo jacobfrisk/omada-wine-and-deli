@@ -138,39 +138,39 @@ import "../styles.css";
     slider.style.overflow = "visible";
   });
 
-  slider.addEventListener("mousedown", (e) => {
-    startX = e.clientX;
-    dragging = true;
-  });
+  // slider.addEventListener("mousedown", (e) => {
+  //   startX = e.clientX;
+  //   dragging = true;
+  // });
 
-  slider.addEventListener("mouseup", () => {
-    dragging = false;
-  });
+  // slider.addEventListener("mouseup", () => {
+  //   dragging = false;
+  // });
 
-  slider.addEventListener("mousemove", (e) => {
-    if (dragging) {
-      const diff = e.clientX - startX;
-      currentPosition = Math.min(Math.max(currentPosition - diff, 0), (numItems - 1) * itemWidth);
-      slider.style.transform = `translateX(-${currentPosition}px)`;
-      startX = e.clientX;
-    }
-  });
+  // slider.addEventListener("mousemove", (e) => {
+  //   if (dragging) {
+  //     const diff = e.clientX - startX;
+  //     currentPosition = Math.min(Math.max(currentPosition - diff, 0), (numItems - 1) * itemWidth);
+  //     slider.style.transform = `translateX(-${currentPosition}px)`;
+  //     startX = e.clientX;
+  //   }
+  // });
 
-  slider.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-    dragging = true;
-  });
+  // slider.addEventListener("touchstart", (e) => {
+  //   startX = e.touches[0].clientX;
+  //   dragging = true;
+  // });
 
-  slider.addEventListener("touchend", () => {
-    dragging = false;
-  });
+  // slider.addEventListener("touchend", () => {
+  //   dragging = false;
+  // });
 
-  slider.addEventListener("touchmove", (e) => {
-    if (dragging) {
-      const diff = e.touches[0].clientX - startX;
-      currentPosition = Math.min(Math.max(currentPosition - diff, 0), (numItems - 1) * itemWidth);
-      slider.style.transform = `translateX(-${currentPosition}px)`;
-      startX = e.touches[0].clientX;
-    }
-  });
+  // slider.addEventListener("touchmove", (e) => {
+  //   if (dragging) {
+  //     const diff = e.touches[0].clientX - startX;
+  //     currentPosition = Math.min(Math.max(currentPosition - diff, 0), (numItems - 1) * itemWidth);
+  //     slider.style.transform = `translateX(-${currentPosition}px)`;
+  //     startX = e.touches[0].clientX;
+  //   }
+  // });
 </script>

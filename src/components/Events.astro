@@ -32,7 +32,7 @@ const data = await response.json();
         <label for="age2">Croque messieurs</label><br />
         <input type="radio" id="dish3" name="dish" value="pig" />
         <label for="Roasted pig">Roasted pig</label><br /><br />
-        <input class="submit-white" type="submit" value="Vote" />
+        <input class="submit-white" type="submit" value="Stem" />
       </div>
     </div>
   </section>
@@ -135,6 +135,11 @@ const data = await response.json();
     color: white;
   }
 
+  #events {
+    margin-top: var(--medium);
+    margin-bottom: var(--large);
+  }
+
   @media (min-width: 850px) {
     #plat {
       display: grid;
@@ -151,6 +156,11 @@ const data = await response.json();
 
     #plat_text {
       grid-column: 1/2;
+    }
+
+    #events {
+      margin-top: 0px;
+      margin-bottom: 0;
     }
   }
   #all_events {
@@ -181,9 +191,6 @@ const data = await response.json();
   }
 
   #calender {
-    margin-bottom: var(--small);
-  }
-  #events {
     margin-bottom: var(--small);
   }
 
